@@ -1,0 +1,34 @@
+# Node.js
+/node_modules
+/package-lock.json
+/yarn.lock
+/dist
+/build
+
+# macOS specific files
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# npm log files
+npm-debug.log
+yarn-error.log
+
+# Environment files
+.env
+.env.local
+.env.*.local
+
+# VS Code files
+.vscode/
+
+# Other IDE/editor files
+.idea/
+*.sublime-project
+*.sublime-workspace
+
+# MacOS specific resource fork files
+._*
+
+# Coverage reports
+/coverage
