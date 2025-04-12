@@ -4,28 +4,11 @@ export function sqlWhereIn(col: string, arr: string[]) {
   return `WHERE ${col} IN (${arr.map((item) => `'${item}'`).join(',')})`
 }
 
-// translates provided sort value to column name in db.
-export function mapSortToDBValue(column: string) {
-  switch (column) {
-    case 'Filename':
-      return 'fileName'
-    case 'Length':
-      return 'bytes'
-    case 'Time':
-      return 'processingTime'
-    default:
-      return 'fileName'
-  }
-}
-
-// translates provided filter value to column name in db.
-export function mapFilterToStatement(prepend: string,column: string) {
-  switch (column) {
-    case 'Passing':
-      return prepend + 'isvalid = 1'
-    case 'Failing':
-      return prepend + 'isvalid = 0'
-    default:
-      return ''
-  }
-}
+// more to add in the future...
+// sqlWhere(col: string, valA: string, comparison: string, valB?: string)
+// sqlSelect(tableName: string, columns: string[] = ["*"])
+// sqlInsert(tableName: string, data: Record<string, string | number>)
+// sqlUpdate(tableName: string, updates: Record<string, string | number>, whereClause: string)
+// sqlDelete(tableName: string, whereClause: string)
+// sqlOrderBy(columns: string[], directions?: string[])
+// sqlLimitOffset(limit: number, offset: number = 0)
